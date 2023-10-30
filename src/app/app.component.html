@@ -1,0 +1,84 @@
+
+  <div>
+    <div id="degradado"></div>
+    <div id="fondo">
+     
+        <img *ngFor="let imagen of imagenes" id="foto" [src]="'../assets/imagenes/' + imagen.imagen" >
+      
+    </div>
+    <div id="logo">
+      <img src="../assets/imagenes/logo2.png">
+    </div>
+    <!-- Hola  -->
+    <button id="usuario"><b>USUARIO</b></button>
+    <button id="contacto"><b>CONTACTO</b></button>
+    <button id="departamento"><b>DEPARTAMENTOS</b></button>
+    <button id="aboutus"><b>ABOUT US</b></button>
+  </div>
+  <!--  <div id="datos">
+    <ul>
+      <li *ngFor="let dato of datos">
+        {{ dato.nombre }} {{ dato.apellido }}
+      </li>
+    </ul>
+   </div>
+-->
+  <div>
+    <h1>Información de Usuarios</h1>
+    <ul>
+      <li *ngFor="let usuario of usuarios">
+        <strong>Nombre:</strong> {{ usuario.nombre }}<br>
+        <strong>Apellido:</strong> {{ usuario.apellido }}<br>
+        <strong>Email:</strong> {{ usuario.email }}<br>
+        <strong>Fecha de Nacimiento:</strong> {{ usuario.fechaNacimiento | date }}<br>
+        <strong>Dirección:</strong> {{ usuario.direccion.calle }}, {{ usuario.direccion.codigoPostal }}, {{ usuario.direccion.ciudad }}<br>
+        <hr>
+      </li>
+    </ul>
+  </div>
+  
+
+
+ 
+  <div id="textaboutus">
+    <form method = "POST">
+      <h1><b>ABOUT US</b></h1>
+      <div>
+        <!--nombre de Usuario-->
+          <div>
+            Our team consists of three dedicated members: Wesley, Arnau, and Alejandro, 
+            who collectively bring their expertise and passion to drive the success of our computer company. <br>
+            Together, we strive to provide top-notch services, cater to the needs of our customers,
+            and continue to grow and adapt to the ever-changing technology landscape. 
+               
+          </div>   
+      </div>
+    </form>
+    
+  </div>
+  
+  <div id="textcontacto">
+    <form method = "POST">
+      <h1><b>CONTACT</b></h1>
+      <div>
+        <!--nobre de Usuario-->
+          <div>
+            <input type="text" placeholder="Name" name="username">     
+          </div>
+          <div>
+            <input type="text" placeholder="Surname" name="username">     
+          </div>
+          <div>
+            <input type="email" placeholder="Mail" name="email">    
+          </div>
+          <div>
+            <input type="number" placeholder="Phone" name="phone">     
+          </div>
+          <div>
+            <input type="text" placeholder="Message" name="message">     
+          </div>
+          <input type="submit" value="Submit" class="buttom" name="botom" >
+      </div>
+    </form>  
+  </div>
+
